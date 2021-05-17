@@ -14,7 +14,7 @@ For Gardener Enhancement Proposals (GEPs), please check the following [documenta
 -->
 /area TODO
 /kind TODO
-/os garden-linux
+/os k3os
 
 **What this PR does / why we need it**:
 

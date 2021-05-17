@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//go:generate ../../vendor/github.com/gardener/gardener/hack/generate-controller-registration.sh os-gardenlinux . ../../VERSION ../../example/controller-registration.yaml OperatingSystemConfig:gardenlinux
+//go:generate ../../vendor/github.com/gardener/gardener/hack/generate-controller-registration.sh os-k3os . ../../VERSION ../../example/controller-registration.yaml OperatingSystemConfig:k3os
 
 // Package chart enables go:generate support for generating the correct controller registration.
 package chart

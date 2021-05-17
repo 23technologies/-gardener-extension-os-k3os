@@ -33,7 +33,7 @@ func additionalValues(*extensionsv1alpha1.OperatingSystemConfig) (map[string]int
 var templates embed.FS
 
 func init() {
-	cloudInitTemplateString, err := templates.ReadFile("templates/cloud-init.gardenlinux.template")
+	cloudInitTemplateString, err := templates.ReadFile("templates/cloud-init.k3os.template")
 	runtime.Must(err)
 
 	cloudInitTemplate, err := ostemplate.NewTemplate("cloud-init").Parse(string(cloudInitTemplateString))

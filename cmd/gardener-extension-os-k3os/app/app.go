@@ -18,7 +18,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/gardener/gardener-extension-os-gardenlinux/pkg/generator"
+	"github.com/23technologies/gardener-extension-os-k3os/pkg/generator"
 
 	extcontroller "github.com/gardener/gardener/extensions/pkg/controller"
 	controllercmd "github.com/gardener/gardener/extensions/pkg/controller/cmd"
@@ -33,8 +33,8 @@ import (
 )
 
 var (
-	ctrlName = "gardenlinux"
-	osTypes  = []string{"gardenlinux"}
+	ctrlName = "k3os"
+	osTypes  = []string{"k3os"}
 )
 
 // NewControllerCommand returns a new Command with a new Generator

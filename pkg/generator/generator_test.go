@@ -15,8 +15,8 @@
 package generator_test
 
 import (
-	gardenlinux_generator "github.com/gardener/gardener-extension-os-gardenlinux/pkg/generator"
-	"github.com/gardener/gardener-extension-os-gardenlinux/pkg/generator/testfiles"
+	k3os_generator "github.com/23technologies/gardener-extension-os-k3os/pkg/generator"
+	"github.com/23technologies/gardener-extension-os-k3os/pkg/generator/testfiles"
 
 	commongen "github.com/gardener/gardener/extensions/pkg/controller/operatingsystemconfig/oscommon/generator"
 	"github.com/gardener/gardener/extensions/pkg/controller/operatingsystemconfig/oscommon/generator/test"
@@ -85,11 +85,11 @@ dataKey: token`)
 	}
 )
 
-var _ = Describe("Garden Linux OS Generator Test", func() {
+var _ = Describe("K3OS Generator Test", func() {
 
 	Describe("Conformance Tests", func() {
-		g := gardenlinux_generator.CloudInitGenerator()
-		test.DescribeTest(gardenlinux_generator.CloudInitGenerator(), testfiles.Files)()
+		g := k3os_generator.CloudInitGenerator()
+		test.DescribeTest(k3os_generator.CloudInitGenerator(), testfiles.Files)()
 
 		It("[docker] [bootstrap] should render correctly ", func() {
 			expectedCloudInit, err := testfiles.Files.ReadFile("docker-bootstrap")

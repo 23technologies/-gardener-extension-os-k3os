@@ -2,13 +2,13 @@
 apiVersion: "autoscaling.k8s.io/v1beta2"
 kind: VerticalPodAutoscaler
 metadata:
-  name: gardener-extension-os-gardenlinux-vpa
+  name: gardener-extension-os-k3os-vpa
   namespace: {{ .Release.Namespace }}
 spec:
   targetRef:
     apiVersion: {{ include "deploymentversion" . }}
     kind: Deployment
-    name: gardener-extension-os-gardenlinux
+    name: gardener-extension-os-k3os
   updatePolicy:
     updateMode: {{ .Values.vpa.updatePolicy.updateMode }}
   {{- if .Values.vpa.resourcePolicy }}

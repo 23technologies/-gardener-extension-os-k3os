@@ -1,4 +1,4 @@
-module github.com/gardener/gardener-extension-os-gardenlinux
+module github.com/23technologies/gardener-extension-os-k3os
 
 go 1.16
 

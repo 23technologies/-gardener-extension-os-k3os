@@ -15,7 +15,7 @@
 package main
 
 import (
-	"github.com/gardener/gardener-extension-os-gardenlinux/cmd/gardener-extension-os-gardenlinux/app"
+	"github.com/23technologies/gardener-extension-os-k3os/cmd/gardener-extension-os-k3os/app"
 
 	controllercmd "github.com/gardener/gardener/extensions/pkg/controller/cmd"
 	"github.com/gardener/gardener/extensions/pkg/log"

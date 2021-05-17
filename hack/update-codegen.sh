@@ -24,17 +24,17 @@ PROJECT_ROOT=$(dirname $0)/..
 
 bash "${PROJECT_ROOT}"/vendor/k8s.io/code-generator/generate-internal-groups.sh \
   deepcopy,defaulter \
-  github.com/gardener/gardener-extension-os-gardenlinux/pkg/client \
-  github.com/gardener/gardener-extension-os-gardenlinux/pkg/apis \
-  github.com/gardener/gardener-extension-os-gardenlinux/pkg/apis \
+  github.com/23technologies/gardener-extension-os-k3os/pkg/client \
+  github.com/23technologies/gardener-extension-os-k3os/pkg/apis \
+  github.com/23technologies/gardener-extension-os-k3os/pkg/apis \
   "memoryonechost:v1alpha1" \
   --go-header-file "${PROJECT_ROOT}/vendor/github.com/gardener/gardener/hack/LICENSE_BOILERPLATE.txt"
 
 bash "${PROJECT_ROOT}"/vendor/k8s.io/code-generator/generate-internal-groups.sh \
   conversion \
-  github.com/gardener/gardener-extension-os-gardenlinux/pkg/client \
-  github.com/gardener/gardener-extension-os-gardenlinux/pkg/apis \
-  github.com/gardener/gardener-extension-os-gardenlinux/pkg/apis \
+  github.com/23technologies/gardener-extension-os-k3os/pkg/client \
+  github.com/23technologies/gardener-extension-os-k3os/pkg/apis \
+  github.com/23technologies/gardener-extension-os-k3os/pkg/apis \
   "memoryonechost:v1alpha1" \
-  --extra-peer-dirs=github.com/gardener/gardener-extension-os-gardenlinux/pkg/apis/memoryonechost,github.com/gardener/gardener-extension-os-gardenlinux/pkg/apis/memoryonechost/v1alpha1,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/apimachinery/pkg/conversion,k8s.io/apimachinery/pkg/runtime \
+  --extra-peer-dirs=github.com/23technologies/gardener-extension-os-k3os/pkg/apis/memoryonechost,github.com/gardener/gardener-extension-os-k3os/pkg/apis/memoryonechost/v1alpha1,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/apimachinery/pkg/conversion,k8s.io/apimachinery/pkg/runtime \
   --go-header-file "${PROJECT_ROOT}/vendor/github.com/gardener/gardener/hack/LICENSE_BOILERPLATE.txt"

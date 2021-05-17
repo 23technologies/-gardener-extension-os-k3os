@@ -1,5 +1,5 @@
 image:
-  repository: eu.gcr.io/gardener-project/gardener/extensions/os-gardenlinux
+  repository: ghcr.io/23technologies/gardener-extension-os-k3os
   tag: latest
   pullPolicy: IfNotPresent
 

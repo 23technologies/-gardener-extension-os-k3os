@@ -24,7 +24,7 @@ If multiple identifiers make sense you can also state the commands multiple time
 /area testing
 /kind flake
 /priority 3
-/os garden-linux
+/os k3os
 
 **Which test(s)/suite(s) are flaking**:
 

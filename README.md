@@ -1,9 +1,6 @@
-# [Gardener Extension for Garden Linux OS](https://gardener.cloud)
+# [Gardener Extension for K3OS](https://gardener.cloud)
 
-[![CI Build status](https://concourse.ci.gardener.cloud/api/v1/teams/gardener/pipelines/gardener-extension-os-gardenlinux-master/jobs/master-head-update-job/badge)](https://concourse.ci.gardener.cloud/teams/gardener/pipelines/gardener-extension-os-gardenlinux-master/jobs/master-head-update-job)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gardener/gardener-extension-os-gardenlinux)](https://goreportcard.com/report/github.com/gardener/gardener-extension-os-gardenlinux)
-
-This controller operates on the [`OperatingSystemConfig`](https://github.com/gardener/gardener/blob/master/docs/proposals/01-extensibility.md#cloud-config-user-data-for-bootstrapping-machines) resource in the `extensions.gardener.cloud/v1alpha1` API group. It manages those objects that are requesting [Garden Linux OS](https://gardenlinux.io/) configuration (`.spec.type=gardenlinux`):
+This controller operates on the [`OperatingSystemConfig`](https://github.com/gardener/gardener/blob/master/docs/proposals/01-extensibility.md#cloud-config-user-data-for-bootstrapping-machines) resource in the `extensions.gardener.cloud/v1alpha1` API group. It manages those objects that are requesting [K3OS](https://k3os.io/) configuration (`.spec.type=k3os`):
 
 ```yaml
 ---
@@ -13,7 +10,7 @@ metadata:
   name: pool-01-original
   namespace: default
 spec:
-  type: gardenlinux
+  type: k3os
   units:
     ...
   files:
@@ -43,7 +40,7 @@ The secret has one data key `cloud_config` that stores the generation.
 
 An example for a `ControllerRegistration` resource that can be used to register this controller to Gardener can be found [here](example/controller-registration.yaml).
 
-This controller is based on revision [b5ba8164](https://github.com/gardener/gardener-extension-os-ubuntu-alicloud/commit/b5ba8164ed4c52872b1d4bd5ee3eaa4ed58da966) of [gardener-extension-os-ubuntu-alicloud](https://github.com/gardener/gardener-extension-os-ubuntu-alicloud). Its implementation is using the [`oscommon`](https://github.com/gardener/gardener/extensions/pkg/controller/operatingsystemconfig/oscommon/README.md) library for operating system configuration controllers.
+This controller is based on revision [cb4cbfc4](https://github.com/gardener/gardener-extension-os-gardenlinux/commit/cb4cbfc4dd69c944eb9adb0953fb8190a75f7936) of [gardener-extension-os-gardenlinux](https://github.com/gardener/gardener-extension-os-gardenlinux). Its implementation is using the [`oscommon`](https://github.com/gardener/gardener/extensions/pkg/controller/operatingsystemconfig/oscommon/README.md) library for operating system configuration controllers.
 
 Please find more information regarding the extensibility concepts and a detailed proposal [here](https://github.com/gardener/gardener/blob/master/docs/proposals/01-extensibility.md).
 
@@ -56,7 +53,7 @@ Static code checks and tests can be executed by running `VERIFY=true make all`. 
 
 ## Feedback and Support
 
-Feedback and contributions are always welcome. Please report bugs or suggestions as [GitHub issues](https://github.com/gardener/gardener-extension-os-gardenlinux/issues) or join our [Slack channel #gardener](https://kubernetes.slack.com/messages/gardener) (please invite yourself to the Kubernetes workspace [here](http://slack.k8s.io)).
+Feedback and contributions are always welcome. Please report bugs or suggestions as [GitHub issues](https://github.com/23technologies/gardener-extension-os-k3os/issues) or join our [Slack channel #gardener](https://kubernetes.slack.com/messages/gardener) (please invite yourself to the Kubernetes workspace [here](http://slack.k8s.io)).
 
 ## Learn more!
 
