@@ -1,0 +1,21 @@
+image:
+  repository: eu.gcr.io/gardener-project/gardener/extensions/os-gardenlinux
+  tag: latest
+  pullPolicy: IfNotPresent
+
+resources: {}
+
+vpa:
+  enabled: true
+  resourcePolicy:
+    minAllowed:
+      cpu: 50m
+      memory: 64Mi
+  updatePolicy:
+    updateMode: "Auto"
+
+controllers:
+  concurrentSyncs: 5
+  ignoreOperationAnnotation: false
+
+disableControllers: []
