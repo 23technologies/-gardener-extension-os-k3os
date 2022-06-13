@@ -1,5 +1,9 @@
 # [Gardener Extension for K3OS](https://gardener.cloud)
 
+** WARNING: THIS EXTENSION IS IN A PRELIMINARY STATE **
+**It is more meant as an idea for an extension than productive software**
+**If you are interested in this topic, feel free to contact us**
+
 This controller operates on the [`OperatingSystemConfig`](https://github.com/gardener/gardener/blob/master/docs/proposals/01-extensibility.md#cloud-config-user-data-for-bootstrapping-machines) resource in the `extensions.gardener.cloud/v1alpha1` API group. It manages those objects that are requesting [K3OS](https://k3os.io/) configuration (`.spec.type=k3os`):
 
 ```yaml
