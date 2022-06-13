@@ -1,6 +1,6 @@
 # [Gardener Extension for K3OS](https://gardener.cloud)
 
-** WARNING: THIS EXTENSION IS IN A PRELIMINARY STATE **
+:warning: **WARNING: THIS EXTENSION IS IN A PRELIMINARY STATE** :warning:
 
 **It is more meant as an idea for an extension than productive software**
 
